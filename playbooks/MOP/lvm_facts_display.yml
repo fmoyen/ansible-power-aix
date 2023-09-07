@@ -11,6 +11,9 @@
     - name: "Print all available LVM facts"
       debug:
         msg: "{{ LVM }}"
+    - name: "Print only VGs LVM facts"
+      debug:
+        msg: "{{ LVM.['VGs'] }}"
     - name: "Gather VG facts"
       ibm.power_aix.lvm_facts:
         name: all

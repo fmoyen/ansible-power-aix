@@ -12,6 +12,9 @@
       ibm.power_aix.lvm_facts:
         name: all
         component: vg
+    - name: "Print all available facts"
+      debug:
+        msg: "{{ LVM }}"
     - name: "Gather LV facts"
       ibm.power_aix.lvm_facts:
         name: all

@@ -6,6 +6,9 @@
     log_file: "/tmp/ansible_lvmfacts_debug.log"
 
   tasks:
+    - name: "Print all available LVM facts. Empty ??"
+      debug:
+        msg: "{{ LVM }}"
     - name: "Gather all lvm facts"
       ibm.power_aix.lvm_facts:
     - name: "Print all available LVM facts"

@@ -22,5 +22,5 @@
         component: pv
         lvm: "{{ ansible_facts.LVM }}"
     - name: "Print all available facts"
-      ansible.builtin.debug:
-        var: "{{ ansible_facts.LVM.VGs.name }}"
+      debug:
+        msg: "{{ LVM }}"

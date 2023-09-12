@@ -1,0 +1,23 @@
+all: # keys must be unique, i.e. only one 'hosts' per group
+    hosts:
+    vars:
+    children:   # key order does not matter, indentation does
+        aix:
+            children:
+                nimserver:
+                    hosts:
+                        D-LLOY-nim:
+                            ansible_host: D-LLOY-nim
+                    vars:
+                        vm_targets: D-LLOY-oracle1
+                nimclient:
+                    hosts:
+                        D-LLOY-oracle1:
+                            ansible_host: D-LLOY-oracle1
+                        D-LLOY-oracle2:
+                            ansible_host: D-LLOY-oracle2
+                    vars:
+                        res_group: basic_res_grp
+            hosts:
+                d68bay01:
+                    ansible_host: d68bay01.aus.stglabs.ibm.com

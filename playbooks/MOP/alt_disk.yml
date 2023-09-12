@@ -22,7 +22,7 @@
   #     allow_old_rootvg: yes
 
   - name: Creating alt_disk_copy on a disk with minimize disk_size_policy
-    alt_disk:
+    ibm.power_aix.alt_disk:
       action: copy
       disk_size_policy: nearest
         #force: true

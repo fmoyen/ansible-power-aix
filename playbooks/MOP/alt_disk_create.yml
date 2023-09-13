@@ -25,4 +25,4 @@
     ibm.power_aix.alt_disk:
       action: copy
       disk_size_policy: nearest
-        #force: true
+      force: true

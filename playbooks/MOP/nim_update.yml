@@ -5,7 +5,8 @@
   gather_facts: no
   vars:
     # install_targets_v:      D-LLOY-oracle2 
-    update_lpp_v:           latest_sp
+    # update_lpp_v:           latest_sp
+    update_lpp_v:           lppsource_AIX73_TL1SP2
 
   collections:
   - ibm.power_aix

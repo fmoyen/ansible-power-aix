@@ -5,7 +5,7 @@
   vars:
     #    spot_name_v: spot_test4
     #    spot_final_location_v: /nim1/spot_test4_from_lpp_source
-    lpp_source_v: lppsource_AIX73_TL0SP2
+    #    lpp_source_v: lppsource_AIX73_TL0SP2
       #    software_lpp_source: /nim1/lpp_source
       #    lpp_source_location: /nim1/lpp_source_test4
 

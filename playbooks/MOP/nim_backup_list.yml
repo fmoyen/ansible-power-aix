@@ -8,7 +8,7 @@
     other_attributes_v:     ""
     # for Standalone LPAR
     # lpar_nim_node_v:        {}
-    lpar_targets_v:         "D-LLOY-oracle2"
+    # lpar_targets_v:         "D-LLOY-oracle2"
     sysb_location_v:        "/data/NIM/mksysb"
     sysb_name_prefix_v:     "mksysb_"
     sysb_name_postfix_v:    ""

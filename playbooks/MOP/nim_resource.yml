@@ -16,7 +16,7 @@
     - name: Show a NIM resource object.
       ibm.power_aix.nim_resource:
         action: show
-        name: "{{ lppsource_v }}"
+        name: "{{ lpp_source_v }}"
       register: result
 
     - name: Display result

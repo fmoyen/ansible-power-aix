@@ -1,0 +1,38 @@
+---
+- name: "Backup operation using NIM for on AIX/VIOS"
+  hosts: D-LLOY-nim
+  gather_facts: no
+  vars:
+    preview_v:              True
+    flags_v:                ""
+    other_attributes_v:     ""
+    # for Standalone LPAR
+    # lpar_nim_node_v:        {}
+    lpar_targets_v:         "D-LLOY-oracle2"
+    sysb_location_v:        "/data/NIM/mksysb"
+    sysb_name_v:            "ansible_img"
+    sysb_name_prefix_v:     "ansible"
+    sysb_name_postfix_v:    "_sysb"
+    sysb_group_v:           ""
+    sysb_spot_name_v:       ""
+    sysb_spot_prefix_v:     ""
+    sysb_spot_postfix_v:    ""
+    sysb_spot_location_v:   "/data/NIM/spot"
+    sysb_remove_spot_v:     False
+    sysb_remove_backup_v:   False
+    sysb_boot_target_v:     True
+    # for backup list
+    oslevel_v:              "7300-00-02"
+
+  tasks:
+
+  - name: Create a mksysb backup of a LPAR
+    nim_backup:
+      action: create
+      targets: "{{ lpar_targets_v }}"
+      location: "{{ sysb_location_v }}"
+      # name: "{{ sysb_name_v }}"
+      # name_prefix: "{{ sysb_name_prefix_v }}"
+      # name_postfix: "{{ sysb_name_postfix_v }}"
+    register: result
+  - debug: var=result

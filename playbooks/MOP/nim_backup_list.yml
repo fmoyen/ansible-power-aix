@@ -11,8 +11,8 @@
     lpar_targets_v:         "D-LLOY-oracle2"
     sysb_location_v:        "/data/NIM/mksysb"
     sysb_name_prefix_v:     "mksysb_"
-      #sysb_name_v:            "{{sysb_name_prefix_v}}{{lpar_targets_v}}"
     sysb_name_postfix_v:    ""
+    sysb_name_v:            "{{sysb_name_prefix_v}}{{lpar_targets_v}}{{sysb_name_postfix_v}}"
     sysb_group_v:           ""
     sysb_spot_name_v:       ""
     sysb_spot_prefix_v:     ""
@@ -34,7 +34,7 @@
       action: list
       targets: "ALL"
       oslevel: "{{ oslevel_v }}"
-      # name: "{{ sysb_name_v }}"
+      name: "{{ sysb_name_v }}"
       # name_prefix: "{{ sysb_name_prefix_v }}"
       # name_postfix: "{{ sysb_name_postfix_v }}"
     register: result

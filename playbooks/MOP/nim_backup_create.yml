@@ -8,10 +8,10 @@
     other_attributes_v:     ""
     # for Standalone LPAR
     # lpar_nim_node_v:        {}
-    lpar_targets_v:         "D-LLOY-oracle2"
+    #    lpar_targets_v:         "D-LLOY-oracle2"
     sysb_location_v:        "/data/NIM/mksysb"
     sysb_name_v:            "ansible_img"
-    sysb_name_prefix_v:     "ansible"
+    sysb_name_prefix_v:     "{{lpar_targets_v}}"
     sysb_name_postfix_v:    "_sysb"
     sysb_group_v:           ""
     sysb_spot_name_v:       ""
@@ -21,8 +21,6 @@
     sysb_remove_spot_v:     False
     sysb_remove_backup_v:   False
     sysb_boot_target_v:     True
-    # for backup list
-    oslevel_v:              "7300-00-02"
 
   collections:
   - ibm.power_aix
@@ -35,7 +33,7 @@
       targets: "{{ lpar_targets_v }}"
       location: "{{ sysb_location_v }}"
       # name: "{{ sysb_name_v }}"
-      # name_prefix: "{{ sysb_name_prefix_v }}"
-      # name_postfix: "{{ sysb_name_postfix_v }}"
+      name_prefix: "{{ sysb_name_prefix_v }}"
+      name_postfix: "{{ sysb_name_postfix_v }}"
     register: result
   - debug: var=result

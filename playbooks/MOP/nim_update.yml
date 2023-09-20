@@ -1,0 +1,23 @@
+---
+- name: "NIM operation on AIX"
+  hosts: D-LLOY-nim
+  remote_user: root
+  gather_facts: no
+  vars:
+    # install_targets_v:      D-LLOY-oracle2 
+    update_lpp_v:           latest_sp
+
+  collections:
+  - ibm.power_aix
+
+  tasks:
+
+    - name: Update a LPAR to the latest level available
+      nim:
+        action: update
+        targets: "{{ install_targets_v }}"
+        lpp_source: "{{ update_lpp_v }}"
+        asynchronous: true
+        force: false
+      register: result
+    - debug: var=result

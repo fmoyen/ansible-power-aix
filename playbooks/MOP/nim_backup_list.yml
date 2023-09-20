@@ -24,6 +24,9 @@
     # for backup list
     oslevel_v:              "7300-00-02"
 
+  collections:
+  - ibm.power_aix
+
   tasks:
 
   - name: List backup on the NIM Master

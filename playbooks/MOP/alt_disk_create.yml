@@ -1,6 +1,6 @@
 ---
 - name: "Alt_Disk in AIX"
-  hosts: "{{ hosts_val }}"
+  hosts: "{{ host_name }}"
   gather_facts: no
   vars:
     hosts_val: all

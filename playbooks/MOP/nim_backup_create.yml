@@ -34,6 +34,6 @@
       location: "{{ sysb_location_v }}"
       # name: "{{ sysb_name_v }}"
       name_prefix: "{{ sysb_name_prefix_v }}"
-      # name_postfix: "{{ sysb_name_postfix_v }}"
+      name_postfix: "{{ sysb_name_postfix_v }}"
     register: result
   - debug: var=result

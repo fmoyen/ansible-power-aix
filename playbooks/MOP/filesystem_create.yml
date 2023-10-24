@@ -9,6 +9,7 @@
     mount_group_v: test
     permissions_v: rw
     vg_name: rootvg
+    automount: true
   collections:
     ibm.power_aix
 
@@ -22,3 +23,4 @@
         mount_group: "{{mount_group_v}}"
         permissions: "{{permissions_v}}"
         vg: "{{vg_name}}"
+        auto_mount: "{{automount}}"

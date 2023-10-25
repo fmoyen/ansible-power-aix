@@ -5,6 +5,7 @@
   vars:
     host_name: all
     mount_dir_value: /mnt/testfs
+    mount_over_dir_value: /mnt/testfs
   collections:
     ibm.power_aix
 
@@ -13,3 +14,4 @@
       mount:
         state: umount
         mount_dir: "{{mount_dir_value}}"
+        mount_over_dir: "{{mount_over_dir_value}}"

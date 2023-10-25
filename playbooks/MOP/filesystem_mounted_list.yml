@@ -1,0 +1,13 @@
+---
+- name: "MOUNT on AIX"
+  hosts: "{{host_name}}"
+  gather_facts: no
+  vars:
+    host_name: all
+  collections:
+    ibm.power_aix
+
+  tasks:
+    - name: List mounted filesystems
+      mount:
+        state: show

@@ -10,6 +10,7 @@
     permissions_v: rw
     vg_name: rootvg
     automount: true
+    size: 32768
   collections:
     ibm.power_aix
 
@@ -19,7 +20,7 @@
         state: present
         filesystem: "{{filesystem_name}}"
         fs_type: "{{fs_type_v}}"
-        attributes: size=32768,isnapshot='no'
+        attributes: size="{{size}}",isnapshot='no'
         mount_group: "{{mount_group_v}}"
         permissions: "{{permissions_v}}"
         vg: "{{vg_name}}"

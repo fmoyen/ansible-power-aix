@@ -3,8 +3,8 @@
   hosts: "{{host_name}}"
   gather_facts: no
   vars:
-    host_name: all
-    mount_over_dir_value: /mnt/testfs
+    # host_name: all
+    # mount_over_dir_value: /mnt/testfs
   collections:
     ibm.power_aix
 

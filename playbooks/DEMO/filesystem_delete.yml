@@ -3,8 +3,8 @@
   hosts: "{{host_name}}"
   gather_facts: no
   vars:
-    host_name: all
-    filesystem_name: /newfs
+    # host_name: all
+    # filesystem_name: /newfs
   collections:
     ibm.power_aix
 

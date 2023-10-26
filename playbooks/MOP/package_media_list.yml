@@ -1,5 +1,5 @@
 ---
-- name: "Lsts the contents of the media"
+- name: "Lists the contents of the media"
   hosts: "{{host_name}}"
   gather_facts: no
   vars:

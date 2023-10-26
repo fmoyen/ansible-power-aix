@@ -1,5 +1,5 @@
 ---
-- name: "AIX package installation"
+- name: "AIX package Removal"
   hosts: "{{host_name}}"
   gather_facts: no
   vars:
@@ -11,7 +11,7 @@
     ibm.power_aix
 
   tasks:
-    - name: Installation of an AIX package
+    - name: Uninstallation of an AIX package
       geninstall:
         action: uninstall
         install_list: "{{install_list_value}}"

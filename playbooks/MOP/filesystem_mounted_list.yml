@@ -11,3 +11,5 @@
     - name: List mounted filesystems
       mount:
         state: show
+      register: output
+  - debug: var=output

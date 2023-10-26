@@ -4,10 +4,8 @@
   gather_facts: no
   vars:
     # host_name: all
-    # device_value: /mnt
     # install_list_value: zlibNX.rte
     force_value: False
-    agree_licenses_value: True
     # installp_flags_value: 
   collections:
     ibm.power_aix
@@ -16,5 +14,4 @@
     - name: Installation of an AIX package
       geninstall:
         action: uninstall
-        device: "{{device_value}}"
         install_list: "{{install_list_value}}"

@@ -5,7 +5,7 @@
   vars:
     # host_name: all
     # device_value: /mnt
-    # install_list_value: all # Examples: update_all, zlibNX
+    # install_list_value: zlibNX.rte
     force_value: False
     agree_licenses_value: True
     # installp_flags_value: 
@@ -15,6 +15,6 @@
   tasks:
     - name: Installation of an AIX package
       geninstall:
-        action: install
+        action: uninstall
         device: "{{device_value}}"
         install_list: "{{install_list_value}}"

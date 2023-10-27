@@ -1,5 +1,5 @@
 ---
-- name: "INSTALLP on AIX"
+- name: "INSTALLP uninstall on AIX"
   hosts: "{{host_name}}"
   gather_facts: no
   vars:
@@ -9,7 +9,7 @@
     - ibm.power_aix
   tasks:
 
-    - name: Remove a fileset
+    - name: Uninstall a fileset
       installp:
         action: deinstall
         install_list: "{{install_list_value}}"

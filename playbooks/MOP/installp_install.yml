@@ -14,4 +14,4 @@
         extend_fs: yes
         device: "{{device_value}}"
         install_list: "{{install_list_value}}"
-        updates_only: "{{updates_only_value}}"
+        # updates_only: "{{updates_only_value}}"

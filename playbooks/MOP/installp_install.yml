@@ -10,7 +10,7 @@
   tasks:
     - name: Install software package and expand file systems if necessary
       installp:
-        action: apply
+        action: "{{action_value}}"
         extend_fs: yes
         device: "{{device_value}}"
         install_list: "{{install_list_value}}"

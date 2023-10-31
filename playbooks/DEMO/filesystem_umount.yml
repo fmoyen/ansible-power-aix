@@ -4,7 +4,6 @@
   gather_facts: no
   vars:
     # host_name: all
-    # mount_over_dir_value: /mnt/testfs
   collections:
     ibm.power_aix
 
@@ -12,4 +11,4 @@
     - name: Unmount filesystem
       mount:
         state: umount
-        mount_over_dir: "{{mount_over_dir_value}}"
+        mount_over_dir: "{{mount_dir_value}}"

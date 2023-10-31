@@ -18,7 +18,7 @@
     - name: Creation of a JFS2 filesystem
       filesystem:
         state: present
-        filesystem: "{{filesystem_name}}"
+        filesystem: "{{mount_dir_value}}"
         fs_type: "{{fs_type_v}}"
         attributes: size="{{size}}",isnapshot='no'
         mount_group: "{{mount_group_v}}"

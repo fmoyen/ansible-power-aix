@@ -4,13 +4,12 @@
   gather_facts: no
   vars:
     # host_name: all
-    # filesystem_name: /newfs
   collections:
     ibm.power_aix
 
   tasks:
     - name: Remove a NFS filesystem
       filesystem:
-        filesystem: "{{filesystem_name}}"
+        filesystem: "{{mount_dir_value}}"
         state: absent
         rm_mount_point: true

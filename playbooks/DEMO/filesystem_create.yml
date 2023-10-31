@@ -4,7 +4,6 @@
   gather_facts: no
   vars:
     # host_name: all
-    # filesystem_name: /newfs
     fs_type_v: jfs2
     mount_group_v: test
     permissions_v: rw
